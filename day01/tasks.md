@@ -29,14 +29,14 @@ provider "aws" {
 ```
 
 Resource: are infra components that you want to manage.
-```
+```hcl
 resource "aws_instance" "ec2" {
     ami = "ami-id"
     instance_type = "t2.micro"
 } 
 ```
 Module: are usable components that have one or more resources.
-```
+```hcl
 module  "s3_bucket" {
     source = "terraform-aws-modules/s3-bucket/aws"
     version = "2.0.0"
@@ -48,7 +48,7 @@ module  "s3_bucket" {
 
 Variable: it allows parameterization of configurations
 
-```
+```hcl
 variable "instance_type" {
     description = "The type of instance to create"
     default = "t2.medium"
@@ -56,7 +56,7 @@ variable "instance_type" {
 ```
 
 Output: values returned by a terraform configuration, can be used to display information.
-```
+```hcl
 output "instance_public_ip" {
     value = aws_instance.example.public_ip
 }
