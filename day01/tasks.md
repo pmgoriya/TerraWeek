@@ -22,17 +22,21 @@ Install AWS CLI, configure it using the details of IAM user with relevant permis
 
 - Explain the important terminologies of Terraform with the example at least (5 crucial terminologies).
 Provider: plugins that Tf uses to manage resources on specific infra platforms.
+```hcl
 provider "aws" {
     region = "us-east-1"
 }
+```
 
 Resource: are infra components that you want to manage.
+```
 resource "aws_instance" "ec2" {
     ami = "ami-id"
     instance_type = "t2.micro"
 } 
-
+```
 Module: are usable components that have one or more resources.
+```
 module  "s3_bucket" {
     source = "terraform-aws-modules/s3-bucket/aws"
     version = "2.0.0"
@@ -40,19 +44,23 @@ module  "s3_bucket" {
     bucket_name = "example-bucket"
     acl = "private"    
 }
+```
 
 Variable: it allows parameterization of configurations
 
+```
 variable "instance_type" {
     description = "The type of instance to create"
     default = "t2.medium"
 }
+```
 
 Output: values returned by a terraform configuration, can be used to display information.
+```
 output "instance_public_ip" {
     value = aws_instance.example.public_ip
 }
-
+```
 Attach code snippets and steps wherever necessary and post your learnings on LinkedIn
 
 Feel Free to reach out to any of the TWS Community Builders / Leaders
