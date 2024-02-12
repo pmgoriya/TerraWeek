@@ -3,16 +3,22 @@
 ## Day 1: Introduction to Terraform and Terraform Basics
 
 - What is Terraform and how can it help you manage infrastructure as code?
+  
 It is an open source tool that is used to provision infrastrucure using a high level configuration language or HCL (HashiCorp). 
 
 It can provison infra in multi-cloud environment, produces a tf state that helps in keeping track, reduces human error which can be done through CLI, handles dependency between resources on its own. 
 
 - Why do we need Terraform and how does it simplify infrastructure provisioning?
+  
 The need for scaling the infra can easily be done through this rather than going to the console every single time. 
 
 - How can you install Terraform and set up the environment for AWS, Azure, or GCP?
+  
 To install Terraform we can refer to commands given in the official terraform website.
-It has steps like installing the terraform binary. Unzipping the downloaded file, moving it to a directory as desired and then checking the version
+It has steps like installing the terraform binary. Unzipping the downloaded file, moving it to a directory as desired and then checking the version.
+
+To set up the environment for AWS
+Install AWS CLI, configure it using the details of IAM user with relevant permissions and then set up the AWS provider plugin.
 
 - Explain the important terminologies of Terraform with the example at least (5 crucial terminologies).
 Provider: plugins that Tf uses to manage resources on specific infra platforms.
