@@ -17,21 +17,21 @@ D: allows Tf to fetch info from external sources such as cloud providers, API's.
 - Create a variables.tf file and define a variable
 Help in flexibility and reusability
 
-'''hcl
+```hcl
 variable "instance_type" {
     type = string
     default = "t2.micro"
 }
-'''
+```
 
 Now to use it in a file:
 
-'''hcl
+```hcl
 resource "aws_instance" "demo" {
     ami = "<ami_id>"
     instance_type = var.instance_type
 }
-'''
+```
 
 Here I haven't hardcoded what instance type do I want, this config file will directly take it from variable.tf.
 
@@ -43,7 +43,7 @@ Here I haven't hardcoded what instance type do I want, this config file will dir
 - Add required_providers to your configuration, such as Docker or AWS
 # providers.tf
 
-'''hcl
+```hcl
 provider "docker" {
     host = "<url>"
     cert_path = "/home/pmgoriya/.docker/certs"
@@ -52,6 +52,7 @@ provider "docker" {
 provider "aws"{
     region = "us-east-1"    
 }
+```
 - Test your configuration using the Terraform CLI and make any necessary adjustments
 #screenshots attached
 
