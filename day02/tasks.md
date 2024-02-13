@@ -56,9 +56,10 @@ provider "aws"{
 - Test your configuration using the Terraform CLI and make any necessary adjustments
 #screenshots attached
 
+![Screenshot from 2024-02-13 18-54-37](https://github.com/pmgoriya/TerraWeek/assets/139645682/9a9134ad-e217-4350-a8b7-7e1457a6cbd6)
+![Screenshot from 2024-02-13 18-53-53](https://github.com/pmgoriya/TerraWeek/assets/139645682/85636cbd-6abf-4e4c-b569-a4be358cc50f)
+
 
 Attach code snippets and steps wherever necessary and post your learnings on LinkedIn
 Feel Free to reach out to any of the TWS Community Builders / Leaders
 Watch this 👉 https://youtu.be/kqJIKjkJ1Lo
-
-# Happy Learning🎉🚀
