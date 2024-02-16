@@ -5,6 +5,12 @@ terraform {
 			version = "~>5.0"
 		}
 	}
+	backend "s3" {
+    bucket         = "pmgoriya-qr"
+    key            = "terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+  }
 }
 
 provider "aws" {
